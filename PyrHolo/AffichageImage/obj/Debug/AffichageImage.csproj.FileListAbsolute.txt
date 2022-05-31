@@ -66,3 +66,9 @@ C:\Users\nicol\Desktop\PyrHolo COPIE\AffichageImage\bin\Debug\Interop.WMPLib.dll
 C:\Users\nicol\Desktop\PyrHolo COPIE\AffichageImage\bin\Debug\AxInterop.WMPLib.dll
 C:\Users\nicol\Desktop\PyrHolo COPIE\AffichageImage\obj\Debug\Pyramide_holographique.exe
 C:\Users\nicol\Desktop\PyrHolo COPIE\AffichageImage\obj\Debug\Pyramide_holographique.pdb
+C:\Users\nicol\Desktop\PyrHolo\AffichageImage\bin\Debug\Pyramide_holographique.exe.config
+C:\Users\nicol\Desktop\PyrHolo\AffichageImage\obj\Debug\Interop.WMPLib.dll
+C:\Users\nicol\Desktop\PyrHolo\AffichageImage\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\nicol\Desktop\PyrHolo\AffichageImage\obj\Debug\AffichageImage.csproj.ResolveComReference.cache
+C:\Users\nicol\Desktop\PyrHolo\AffichageImage\obj\Debug\Pyramide_holographique.exe
+C:\Users\nicol\Desktop\PyrHolo\AffichageImage\obj\Debug\Pyramide_holographique.pdb

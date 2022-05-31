@@ -29,26 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.btOuvrir = new System.Windows.Forms.Button();
             this.dlOpFile = new System.Windows.Forms.OpenFileDialog();
             this.dlOpFolder = new System.Windows.Forms.FolderBrowserDialog();
             this.btStart = new System.Windows.Forms.Button();
+            this.btOuvrir = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // btOuvrir
-            // 
-            this.btOuvrir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btOuvrir.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btOuvrir.ForeColor = System.Drawing.Color.White;
-            this.btOuvrir.Image = global::AffichageImage.Properties.Resources.bg_button;
-            this.btOuvrir.Location = new System.Drawing.Point(133, 53);
-            this.btOuvrir.Margin = new System.Windows.Forms.Padding(0);
-            this.btOuvrir.Name = "btOuvrir";
-            this.btOuvrir.Size = new System.Drawing.Size(567, 182);
-            this.btOuvrir.TabIndex = 0;
-            this.btOuvrir.Text = "Ouvrir Image";
-            this.btOuvrir.UseVisualStyleBackColor = true;
-            this.btOuvrir.Click += new System.EventHandler(this.btOuvrir_Click);
             // 
             // dlOpFile
             // 
@@ -73,6 +58,21 @@
             this.btStart.UseVisualStyleBackColor = false;
             this.btStart.Click += new System.EventHandler(this.btStart_Click);
             // 
+            // btOuvrir
+            // 
+            this.btOuvrir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btOuvrir.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btOuvrir.ForeColor = System.Drawing.Color.White;
+            this.btOuvrir.Image = global::AffichageImage.Properties.Resources.bg_button;
+            this.btOuvrir.Location = new System.Drawing.Point(133, 53);
+            this.btOuvrir.Margin = new System.Windows.Forms.Padding(0);
+            this.btOuvrir.Name = "btOuvrir";
+            this.btOuvrir.Size = new System.Drawing.Size(567, 182);
+            this.btOuvrir.TabIndex = 0;
+            this.btOuvrir.Text = "Ouvrir Image";
+            this.btOuvrir.UseVisualStyleBackColor = true;
+            this.btOuvrir.Click += new System.EventHandler(this.btOuvrir_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -82,7 +82,7 @@
             this.Controls.Add(this.btStart);
             this.Controls.Add(this.btOuvrir);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Pyramide Holographique";
             this.ResumeLayout(false);
@@ -90,11 +90,10 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btOuvrir;
         private System.Windows.Forms.OpenFileDialog dlOpFile;
         private System.Windows.Forms.FolderBrowserDialog dlOpFolder;
         private System.Windows.Forms.Button btStart;
+        private System.Windows.Forms.Button btOuvrir;
     }
 }
 

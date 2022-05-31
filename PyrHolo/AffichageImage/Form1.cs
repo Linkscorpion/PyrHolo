@@ -188,7 +188,12 @@ namespace AffichageImage
                 m_dossier = Application.StartupPath + "\\Vision";
                 LectureImage();
             }
-
+            else if (e.KeyCode == Keys.F)
+            {
+                m_dossier = Application.StartupPath + "\\Video";
+                m_time_speed = 17;
+                LectureImage();
+            }
 
         }
 

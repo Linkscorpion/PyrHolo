@@ -1,0 +1,24 @@
+C:\Users\nicol\Desktop\PyrHolo\AffichageImage\obj\Release\Interop.WMPLib.dll
+C:\Users\nicol\Desktop\PyrHolo\AffichageImage\obj\Release\AxInterop.WMPLib.dll
+C:\Users\nicol\Desktop\PyrHolo\AffichageImage\obj\Release\AffichageImage.csproj.ResolveComReference.cache
+C:\Users\nicol\Desktop\PyrHolo\AffichageImage\obj\Release\AffichageImage.csprojResolveAssemblyReference.cache
+C:\Users\nicol\Desktop\PyrHolo\AffichageImage\obj\Release\AffichageImage.Form1.resources
+C:\Users\nicol\Desktop\PyrHolo\AffichageImage\obj\Release\AffichageImage.Properties.Resources.resources
+C:\Users\nicol\Desktop\PyrHolo\AffichageImage\obj\Release\AffichageImage.csproj.GenerateResource.Cache
+C:\Users\nicol\Desktop\PyrHolo\AffichageImage\bin\Release\Interop.WMPLib.dll
+C:\Users\nicol\Desktop\PyrHolo\AffichageImage\bin\Release\AxInterop.WMPLib.dll
+C:\Users\nicol\Desktop\PyrHolo\AffichageImage\bin\Release\Pyramide_holographique.exe.config
+C:\Users\nicol\Desktop\PyrHolo\AffichageImage\bin\Release\Pyramide_holographique.exe
+C:\Users\nicol\Desktop\PyrHolo\AffichageImage\bin\Release\Pyramide_holographique.pdb
+C:\Users\nicol\Desktop\PyrHolo\AffichageImage\obj\Release\Pyramide_holographique.exe
+C:\Users\nicol\Desktop\PyrHolo\AffichageImage\obj\Release\Pyramide_holographique.pdb
+C:\Users\nicol\Desktop\PyrHolo COPIE\AffichageImage\bin\Release\Pyramide_holographique.exe.config
+C:\Users\nicol\Desktop\PyrHolo COPIE\AffichageImage\obj\Release\Interop.WMPLib.dll
+C:\Users\nicol\Desktop\PyrHolo COPIE\AffichageImage\obj\Release\AxInterop.WMPLib.dll
+C:\Users\nicol\Desktop\PyrHolo COPIE\AffichageImage\obj\Release\AffichageImage.csproj.ResolveComReference.cache
+C:\Users\nicol\Desktop\PyrHolo COPIE\AffichageImage\obj\Release\Pyramide_holographique.exe
+C:\Users\nicol\Desktop\PyrHolo COPIE\AffichageImage\obj\Release\Pyramide_holographique.pdb
+C:\Users\nicol\Desktop\PyrHolo COPIE\AffichageImage\obj\Release\AffichageImage.csprojResolveAssemblyReference.cache
+C:\Users\nicol\Desktop\PyrHolo COPIE\AffichageImage\obj\Release\AffichageImage.Form1.resources
+C:\Users\nicol\Desktop\PyrHolo COPIE\AffichageImage\obj\Release\AffichageImage.Properties.Resources.resources
+C:\Users\nicol\Desktop\PyrHolo COPIE\AffichageImage\obj\Release\AffichageImage.csproj.GenerateResource.Cache

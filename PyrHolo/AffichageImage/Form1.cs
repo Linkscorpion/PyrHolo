@@ -20,12 +20,14 @@ namespace AffichageImage
         Thread threadBc;
         bool m_startvar;
         int m_time_speed;
+        string m_dossier;
 
         // Initialisation de la fenêtre principale 
         public Form1()
         {
             InitializeComponent();
             m_startvar = false;
+            m_dossier = Application.StartupPath + "\\Image";
             m_time_speed = 1000;
             this.BackgroundImageLayout = ImageLayout.Stretch;
             m_pbox = new PictureBox();
@@ -54,7 +56,7 @@ namespace AffichageImage
             
                 try{
                     // Mettre un dossier Image à l'endroit où se trouve le fichier .exe ( par défaut dans le dossier debug )
-                    string dossier = Application.StartupPath + "\\Image";
+                    
                     
                     // Déclaration variable
                     string temp = "*.jpg *.png *.jpeg *.bmp";
@@ -85,7 +87,7 @@ namespace AffichageImage
                         {
                             foreach (string extension in ext)
                             {
-                                lst_img = Directory.GetFiles(dossier, extension, SearchOption.TopDirectoryOnly);
+                                lst_img = Directory.GetFiles(m_dossier, extension, SearchOption.TopDirectoryOnly);
                                 foreach (string name in lst_img)
                                 {
                                     lst.Add(name);
@@ -96,13 +98,16 @@ namespace AffichageImage
                     {
                         foreach (string extension in ext)
                         {
-                            lst_img = Directory.GetFiles(dossier, extension, SearchOption.TopDirectoryOnly);
+                            lst_img = Directory.GetFiles(m_dossier, extension, SearchOption.TopDirectoryOnly);
                             foreach (string name in lst_img)
                             {
                                 lst.Add(name);
                             }
                         }
                     }
+
+                    m_startvar = true;
+
 
                     m_img = new Bitmap[lst.Count];
 
@@ -168,6 +173,22 @@ namespace AffichageImage
                 if (m_time_speed == 0)
                     m_time_speed = 100;
             }
+            else if (e.KeyCode == Keys.O)
+            {
+                m_dossier = Application.StartupPath + "\\Optique";
+                LectureImage();
+            }
+            else if (e.KeyCode == Keys.I)
+            {
+                m_dossier = Application.StartupPath + "\\Image";
+                LectureImage();
+            }
+            else if (e.KeyCode == Keys.V)
+            {
+                m_dossier = Application.StartupPath + "\\Vision";
+                LectureImage();
+            }
+
 
         }
 

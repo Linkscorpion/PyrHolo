@@ -18,11 +18,13 @@ namespace AffichageImage
         Bitmap[] img;
         PictureBox pbox;
         Thread threadBc;
+        bool m_startvar;
 
         // Initialisation de la fenêtre principale 
         public Form1()
         {
             InitializeComponent();
+            m_startvar = false;
             this.BackgroundImageLayout = ImageLayout.Stretch;
             pbox = new PictureBox();
             pbox.Location = new Point(0, 0);
@@ -37,7 +39,8 @@ namespace AffichageImage
         // Ouverture des images
         private void btOuvrir_Click(object sender, EventArgs e)
         {
-            btOuvrir.Visible = false;
+            btStart.Hide();
+            btOuvrir.Hide();
             LectureImage();
         }
 
@@ -46,9 +49,11 @@ namespace AffichageImage
         {
             if (threadBc.ThreadState != ThreadState.Aborted)
                 threadBc.Abort();
-            if (dlOpFolder.ShowDialog() == DialogResult.OK)
-            {
-                try{ 
+            
+                try{
+                    // Mettre un dossier Image à l'endroit où se trouve le fichier .exe ( par défaut dans le dossier debug )
+                    string dossier = Application.StartupPath + "\\Image";
+                    
                     // Déclaration variable
                     string temp = "*.jpg *.png *.jpeg *.bmp";
                     string[] ext = temp.Split(' ');
@@ -60,16 +65,43 @@ namespace AffichageImage
                     pbox.Visible = true;
                     pbox.SetBounds(0, 0, ClientSize.Width, ClientSize.Height);
                     this.Controls.Add(pbox);
-
-                    foreach (string extension in ext)
-                    {
-                        //ajoute chaque chemin d'image à la liste de string
-                        lst_img = Directory.GetFiles(dlOpFolder.SelectedPath, extension, SearchOption.TopDirectoryOnly);
-                        foreach (string name in lst_img)
+                    if(m_startvar == false)
+                        if (dlOpFolder.ShowDialog() == DialogResult.OK)
                         {
-                            lst.Add(name);
+                            foreach (string extension in ext)
+                            {
+
+                                //ajoute chaque chemin d'image à la liste de string
+                                lst_img = Directory.GetFiles(dlOpFolder.SelectedPath, extension, SearchOption.TopDirectoryOnly);
+                                foreach (string name in lst_img)
+                                {
+                                    lst.Add(name);
+                                }
+                            }
+                        }
+                        else
+                        {
+                            foreach (string extension in ext)
+                            {
+                                lst_img = Directory.GetFiles(dossier, extension, SearchOption.TopDirectoryOnly);
+                                foreach (string name in lst_img)
+                                {
+                                    lst.Add(name);
+                                }
+                            }
+                        }
+                    else
+                    {
+                        foreach (string extension in ext)
+                        {
+                            lst_img = Directory.GetFiles(dossier, extension, SearchOption.TopDirectoryOnly);
+                            foreach (string name in lst_img)
+                            {
+                                lst.Add(name);
+                            }
                         }
                     }
+
                     img = new Bitmap[lst.Count];
 
                     int i = 0;
@@ -92,7 +124,7 @@ namespace AffichageImage
 
                 }
                 catch(Exception excpt) { MessageBox.Show(excpt.ToString()); }
-            }
+            
         }
 
         // Boucle sur l'affichage des images
@@ -125,6 +157,14 @@ namespace AffichageImage
                 
             }
 
+        }
+
+        private void btStart_Click(object sender, EventArgs e)
+        {
+            m_startvar = true;
+            btStart.Hide();
+            btOuvrir.Hide();
+            LectureImage();
         }
     }
 }

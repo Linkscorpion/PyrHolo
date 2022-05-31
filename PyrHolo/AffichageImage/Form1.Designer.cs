@@ -41,10 +41,10 @@
             this.btOuvrir.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btOuvrir.ForeColor = System.Drawing.Color.White;
             this.btOuvrir.Image = global::AffichageImage.Properties.Resources.bg_button;
-            this.btOuvrir.Location = new System.Drawing.Point(100, 43);
+            this.btOuvrir.Location = new System.Drawing.Point(133, 53);
             this.btOuvrir.Margin = new System.Windows.Forms.Padding(0);
             this.btOuvrir.Name = "btOuvrir";
-            this.btOuvrir.Size = new System.Drawing.Size(425, 148);
+            this.btOuvrir.Size = new System.Drawing.Size(567, 182);
             this.btOuvrir.TabIndex = 0;
             this.btOuvrir.Text = "Ouvrir Image";
             this.btOuvrir.UseVisualStyleBackColor = true;
@@ -64,23 +64,25 @@
             this.btStart.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btStart.ForeColor = System.Drawing.Color.White;
             this.btStart.Image = global::AffichageImage.Properties.Resources.bg_button;
-            this.btStart.Location = new System.Drawing.Point(100, 268);
+            this.btStart.Location = new System.Drawing.Point(133, 330);
             this.btStart.Margin = new System.Windows.Forms.Padding(0);
             this.btStart.Name = "btStart";
-            this.btStart.Size = new System.Drawing.Size(425, 51);
+            this.btStart.Size = new System.Drawing.Size(567, 63);
             this.btStart.TabIndex = 1;
             this.btStart.Text = "Démarrer";
             this.btStart.UseVisualStyleBackColor = false;
+            this.btStart.Click += new System.EventHandler(this.btStart_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::AffichageImage.Properties.Resources.bg_main;
-            this.ClientSize = new System.Drawing.Size(656, 397);
+            this.ClientSize = new System.Drawing.Size(875, 489);
             this.Controls.Add(this.btStart);
             this.Controls.Add(this.btOuvrir);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Pyramide Holographique";
             this.ResumeLayout(false);

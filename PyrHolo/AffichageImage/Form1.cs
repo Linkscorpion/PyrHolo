@@ -15,21 +15,23 @@ namespace AffichageImage
     public partial class Form1 : Form
     {
         //Variable globale
-        Bitmap[] img;
-        PictureBox pbox;
+        Bitmap[] m_img;
+        PictureBox m_pbox;
         Thread threadBc;
         bool m_startvar;
+        int m_time_speed;
 
         // Initialisation de la fenêtre principale 
         public Form1()
         {
             InitializeComponent();
             m_startvar = false;
+            m_time_speed = 1000;
             this.BackgroundImageLayout = ImageLayout.Stretch;
-            pbox = new PictureBox();
-            pbox.Location = new Point(0, 0);
+            m_pbox = new PictureBox();
+            m_pbox.Location = new Point(0, 0);
             
-            pbox.Visible = false;
+            m_pbox.Visible = false;
             this.KeyPreview = true;
             this.KeyDown += new KeyEventHandler(Form1_KeyDown);
             threadBc = new Thread(() => BoucleImage());
@@ -62,9 +64,9 @@ namespace AffichageImage
 
                     this.FormBorderStyle = FormBorderStyle.None;
                     this.WindowState = FormWindowState.Maximized;
-                    pbox.Visible = true;
-                    pbox.SetBounds(0, 0, ClientSize.Width, ClientSize.Height);
-                    this.Controls.Add(pbox);
+                    m_pbox.Visible = true;
+                    m_pbox.SetBounds(0, 0, ClientSize.Width, ClientSize.Height);
+                    this.Controls.Add(m_pbox);
                     if(m_startvar == false)
                         if (dlOpFolder.ShowDialog() == DialogResult.OK)
                         {
@@ -102,17 +104,17 @@ namespace AffichageImage
                         }
                     }
 
-                    img = new Bitmap[lst.Count];
+                    m_img = new Bitmap[lst.Count];
 
                     int i = 0;
                     foreach (String name in lst)
                     {
-                        img[i] = new Bitmap(name);
-                        img[i] = Affichage2D.Resize_Image(img[i], ClientSize.Height / 3, ClientSize.Width / 3);
-                        Bitmap imG = Affichage2D.Rotation_Image(img[i], 90);
-                        Bitmap imH = Affichage2D.Rotation_Image(img[i], 180);
-                        Bitmap imD = Affichage2D.Rotation_Image(img[i], 270);
-                        img[i] = Affichage2D.Fusion_Image(imH, imD, img[i], imG, ClientSize.Width, ClientSize.Height);
+                        m_img[i] = new Bitmap(name);
+                        m_img[i] = Affichage2D.Resize_Image(m_img[i], ClientSize.Height / 3, ClientSize.Width / 3);
+                        Bitmap imG = Affichage2D.Rotation_Image(m_img[i], 90);
+                        Bitmap imH = Affichage2D.Rotation_Image(m_img[i], 180);
+                        Bitmap imD = Affichage2D.Rotation_Image(m_img[i], 270);
+                        m_img[i] = Affichage2D.Fusion_Image(imH, imD, m_img[i], imG, ClientSize.Width, ClientSize.Height);
                         i++;
                     }
 
@@ -133,9 +135,9 @@ namespace AffichageImage
             int i = 0;
             while (1 == 1)
             {
-                if (i >= img.Length) i = 0;
-                pbox.Image = img[i];
-                Thread.Sleep(1000);
+                if (i >= m_img.Length) i = 0;
+                m_pbox.Image = m_img[i];
+                Thread.Sleep(m_time_speed);
                 i++;
             }
         }
@@ -155,6 +157,16 @@ namespace AffichageImage
                 else if (threadBc.ThreadState == ThreadState.Suspended)
                     threadBc.Resume();
                 
+            }
+            else if (e.KeyCode == Keys.B)
+            {
+                m_time_speed += 100;
+            }
+            else if (e.KeyCode == Keys.N)
+            {
+                m_time_speed -= 100;
+                if (m_time_speed == 0)
+                    m_time_speed = 100;
             }
 
         }

@@ -169,9 +169,10 @@ namespace AffichageImage
             }
             else if (e.KeyCode == Keys.N)
             {
-                m_time_speed -= 100;
-                if (m_time_speed == 0)
-                    m_time_speed = 100;
+                if (m_time_speed <= 100)
+                    m_time_speed = 17;
+                else
+                    m_time_speed -= 100;
             }
             else if (e.KeyCode == Keys.O)
             {

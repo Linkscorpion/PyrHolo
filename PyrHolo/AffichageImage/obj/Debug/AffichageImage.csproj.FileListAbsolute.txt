@@ -24,11 +24,6 @@ C:\Users\Scorp\Desktop\PyrHolo\AffichageImage\obj\Debug\AffichageImage.Form1.res
 C:\Users\Scorp\Desktop\PyrHolo\AffichageImage\obj\Debug\AffichageImage.csproj.GenerateResource.Cache
 C:\Users\Scorp\Desktop\PyrHolo\AffichageImage\bin\Debug\AffichageImage.exe
 C:\Users\Scorp\Desktop\PyrHolo\AffichageImage\bin\Debug\AffichageImage.pdb
-C:\Users\nicol\Desktop\PyrHolo\AffichageImage\bin\Debug\AffichageImage.exe.config
-C:\Users\nicol\Desktop\PyrHolo\AffichageImage\obj\Debug\AffichageImage.exe
-C:\Users\nicol\Desktop\PyrHolo\AffichageImage\obj\Debug\AffichageImage.pdb
-C:\Users\nicol\Desktop\PyrHolo\AffichageImage\bin\Debug\AffichageImage.exe
-C:\Users\nicol\Desktop\PyrHolo\AffichageImage\bin\Debug\AffichageImage.pdb
 C:\Users\nicol\Desktop\PyrHolo\AffichageImage\obj\Debug\AffichageImage.csprojResolveAssemblyReference.cache
 C:\Users\nicol\Desktop\PyrHolo\AffichageImage\obj\Debug\AffichageImage.Form1.resources
 C:\Users\nicol\Desktop\PyrHolo\AffichageImage\obj\Debug\AffichageImage.Properties.Resources.resources
@@ -72,3 +67,7 @@ C:\Users\nicol\Desktop\PyrHolo\AffichageImage\obj\Debug\AxInterop.WMPLib.dll
 C:\Users\nicol\Desktop\PyrHolo\AffichageImage\obj\Debug\AffichageImage.csproj.ResolveComReference.cache
 C:\Users\nicol\Desktop\PyrHolo\AffichageImage\obj\Debug\Pyramide_holographique.exe
 C:\Users\nicol\Desktop\PyrHolo\AffichageImage\obj\Debug\Pyramide_holographique.pdb
+C:\Users\nicol\Desktop\PyrHolo\AffichageImage\bin\Debug\Pyramide_holographique.exe
+C:\Users\nicol\Desktop\PyrHolo\AffichageImage\bin\Debug\Pyramide_holographique.pdb
+C:\Users\nicol\Desktop\PyrHolo\AffichageImage\bin\Debug\Interop.WMPLib.dll
+C:\Users\nicol\Desktop\PyrHolo\AffichageImage\bin\Debug\AxInterop.WMPLib.dll
